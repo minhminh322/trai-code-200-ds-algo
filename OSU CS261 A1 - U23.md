@@ -105,6 +105,7 @@ For full credit, the function must be implemented with **O(N)** complexity.
 
 **Example #1:**
 
+```python
 arr = StaticArray(5)
 
 for i, value in enumerate([7, 8, 6, -5, 4]):
@@ -120,6 +121,7 @@ if result:
 print(f”Min: {result[0]: 3}, Max: {result[1]}”) else:
 
 print(“min\_max() not yet implemented”)
+```
 
 **~~Output:~~**
 
