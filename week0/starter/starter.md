@@ -29,7 +29,7 @@ None of the functions in this assignment, will require Python knowledge beyond w
 - add optional default parameters to method definitions
 - modify or add to the basic testing section within the scope of:
 
-  `python if \_\_name\_\_ == "\_\_main\_\_": `
+  ```python if \_\_name\_\_ == "\_\_main\_\_": ```
 
 **However, certain classes and methods cannot be changed in any way.** Please see the comments in the skeleton code for guidance. The content of any methods pre-written for you as part of the skeleton code must not be changed.!
 
