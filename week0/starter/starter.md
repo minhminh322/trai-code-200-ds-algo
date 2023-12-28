@@ -21,17 +21,17 @@ None of the functions in this assignment, will require Python knowledge beyond w
 
 **General Instructions**
 
-1. You will be provided with a starter “skeleton” code, on which you will build your implementation. Methods defined in the skeleton code must retain their names and input/output parameters. Variables defined in the skeleton code must also retain their names. We will only test your solution by making calls to methods defined in the skeleton code, and by checking values of variables defined in the skeleton code.
+1. You will be provided with a starter “skeleton” code, on which you will build your implementation. Methods defined in the skeleton code must retain their names and input/output parameters. Variables defined in the skeleton code must also retain their names. We will only test your solution by making calls to methods defined in the skeleton code, and by checking values of variables defined in the skeleton code. You are allowed to:
 
-   You are allowed to:
+   - add more helper methods and variables, as needed
+   - add optional default parameters to method definitions
+   - modify or add to the basic testing section within the scope of:
 
-- add more helper methods and variables, as needed
-- add optional default parameters to method definitions
-- modify or add to the basic testing section within the scope of:
+  ```python 
+  if \_\_name\_\_ == "\_\_main\_\_":
+   ```
 
-  ```python if \_\_name\_\_ == "\_\_main\_\_": ```
-
-**However, certain classes and methods cannot be changed in any way.** Please see the comments in the skeleton code for guidance. The content of any methods pre-written for you as part of the skeleton code must not be changed.!
+   **However, certain classes and methods cannot be changed in any way.** Please see the comments in the skeleton code for guidance. The content of any methods pre-written for you as part of the skeleton code must not be changed.!
 
 2. The skeleton code and code examples provided in this document are part of assignment requirements. Please read all of them very carefully. They have been carefully selected to demonstrate requirements for each method. Refer to them for detailed descriptions of expected method behavior, input/output parameters, and handling of edge cases.
 
