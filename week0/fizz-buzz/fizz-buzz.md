@@ -43,7 +43,7 @@ else:
 **Output:**
 
 > STAT_ARR Size: 1 [100]
-> Min: 100, Max: 100!
+> Min: 100, Max: 100![ref1]
 
 **Example #3:**
 
