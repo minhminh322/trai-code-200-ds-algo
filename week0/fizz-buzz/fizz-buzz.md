@@ -1,8 +1,13 @@
-# Min Max Exercise
+# Fizz Buzz Exercise
 
-## **min_max**(arr: StaticArray) -> tuple[int, int]:
+## **fizz_buzz**(arr: StaticArray) -> StaticArray:
 
-Write a function that receives a one-dimensional array of integers and returns a Python tuple with two values - the minimum and maximum values of the input array.
+Write a function that receives a StaticArray of integers and returns a new StaticArray object with the content of the original array, modified as follows:
+
+1. If the number in the original array is divisible by 3, the corresponding element in the new array will be the string ‘fizz’.
+2. If the number in the original array is divisible by 5, the corresponding element in the new array will be the string ‘buzz’.
+3. If the number in the original array is both a multiple of 3 and a multiple of 5, the corresponding element in the new array will be the string ‘fizzbuzz’.
+4. In all other cases, the element in the new array will have the same value as in the original array.
 
 The content of the input array must not be changed. You may assume that the input array will contain only integers, and will have at least one element. You do not need to check for these conditions.
 
@@ -11,66 +16,15 @@ For full credit, the function must be implemented with **O(N)** complexity.
 **Example #1:**
 
 ```python
-arr = StaticArray(5)
-for i, value in enumerate([7, 8, 6, -5, 4]):
+source = [_ for _ in range(-5, 20, 4)]
+arr = StaticArray(len(source))
+for i, value in enumerate(source):
     arr[i] = value
+print(fizz_buzz(arr))
 print(arr)
-result = min_max(arr)
-if result:
-    print(f”Min: {result[0]: 3}, Max: {result[1]}”)
-else:
-    print(“min_max() not yet implemented”)
 ```
 
 **Output:**
 
-> STAT_ARR Size: 5 [7, 8, 6, -5, 4]
-> Min: -5, Max: 8
-
-**Example #2:**
-
-```python
-arr = StaticArray(1)
-arr[0] = 100
-print(arr)
-result = min_max(arr)
-if result:
-    print(f”Min: {result[0]}, Max: {result[1]}”)
-else:
-    print(“min_max() not yet implemented”)
-```
-
-**Output:**
-
-> STAT_ARR Size: 1 [100]
-> Min: 100, Max: 100![ref1]
-
-**Example #3:**
-
-```python
-print('\n# min\_max example 3')
-test_cases = (
-    [3, 3, 3],
-    [-10, -30, -5, 0, -10],
-    [25, 50, 0, 10],
-)
-
-for case in test_cases:
-    arr = StaticArray(len(case))
-    for i, value in enumerate(case):
-        arr[i] = value
-    print(arr)
-    result = min_max(arr)
-    if result:
-        print(f”Min: {result[0]: 3}, Max: {result[1]}”)
-    else:
-        print(“min_max() not yet implemented”)
-```
-
-**Output:**
-
-> STAT_ARR Size: 3 [3, 3, 3]
-> Min: 3, Max: 3
-> STAT_ARR Size: 5 [-10, -30, -5, 0, -10] Min: -30, Max: 0
-> STAT_ARR Size: 4 [25, 50, 0, 10]
-> Min: 0, Max: 50
+> STAT_ARR Size: 7 ['buzz', -1, 'fizz', 7, 11, 'fizzbuzz', 19]
+> STAT_ARR Size: 7 [-5, -1, 3, 7, 11, 15, 19]

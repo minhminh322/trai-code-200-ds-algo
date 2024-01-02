@@ -43,7 +43,7 @@ else:
 **Output:**
 
 > STAT_ARR Size: 1 [100]
-> Min: 100, Max: 100!
+> Min: 100, Max: 100
 
 **Example #3:**
 
@@ -71,6 +71,7 @@ for case in test_cases:
 
 > STAT_ARR Size: 3 [3, 3, 3]
 > Min: 3, Max: 3
-> STAT_ARR Size: 5 [-10, -30, -5, 0, -10] Min: -30, Max: 0
+> STAT_ARR Size: 5 [-10, -30, -5, 0, -10]
+> Min: -30, Max: 0
 > STAT_ARR Size: 4 [25, 50, 0, 10]
 > Min: 0, Max: 50
