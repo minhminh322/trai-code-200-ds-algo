@@ -36,6 +36,7 @@ With the understanding you’ll gain in this class about data structures and how
 Along the way, we’ll also learn a few other things, such as the distinctions between abstract data types (ADTs) and data structures.
 
 - ADTs are data types modeled from the point of view of the user of that data type (e.g., a Python programmer using a dictionary).
-  ..\* For example, a hash table can be implemented with either a single list or a collection of lists. The user of the hash table doesn’t need to know (or care about) how it’s implemented, only how it behaves.
+
+  - For example, a hash table can be implemented with either a single list or a collection of lists. The user of the hash table doesn’t need to know (or care about) how it’s implemented, only how it behaves.
 
 - Data structures are concrete representations of data, i.e., a data type from the point of view of the implementer. The user may not care how the hash table is implemented, but it might make a lot of difference to the developer of that hash table.

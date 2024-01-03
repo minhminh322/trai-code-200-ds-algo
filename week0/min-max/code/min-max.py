@@ -1,5 +1,7 @@
 from static_array import *
 
+# ------------------- PROBLEM 1 - MIN_MAX -----------------------------------
+
 def min_max(arr: StaticArray) -> tuple[int, int]:
     """
     TODO: Write this implementation
@@ -7,6 +9,7 @@ def min_max(arr: StaticArray) -> tuple[int, int]:
     pass
 
 # ------------------- TESTING -----------------------------------------
+
 if __name__ == "__main__":
 
     print('\n# min_max example 1')
