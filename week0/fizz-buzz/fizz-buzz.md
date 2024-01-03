@@ -27,4 +27,5 @@ print(arr)
 **Output:**
 
 > STAT_ARR Size: 7 ['buzz', -1, 'fizz', 7, 11, 'fizzbuzz', 19]
+>
 > STAT_ARR Size: 7 [-5, -1, 3, 7, 11, 15, 19]
