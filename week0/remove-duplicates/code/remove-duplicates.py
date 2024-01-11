@@ -3,10 +3,18 @@ from static_array import *
 # ------------------- PROBLEM 8 - REMOVE_DUPLICATES -------------------------
 
 def remove_duplicates(arr: StaticArray) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
-    pass
+    if arr.length() <= 1:
+        return arr  # No duplicates to remove
+    
+    new_arr = StaticArray(arr.length())
+    new_arr_index = 0
+    new_arr[0] = arr[0]
+    for i in range(1, arr.length()):
+        if new_arr[new_arr_index] != arr[i]:
+            new_arr_index += 1
+            new_arr[new_arr_index] = arr[i]
+    
+    return new_arr
 
 # ------------------- BASIC TESTING -----------------------------------------
 

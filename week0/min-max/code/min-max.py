@@ -3,10 +3,16 @@ from static_array import *
 # ------------------- PROBLEM 1 - MIN_MAX -----------------------------------
 
 def min_max(arr: StaticArray) -> tuple[int, int]:
-    """
-    TODO: Write this implementation
-    """
-    pass
+    if arr.length() == 0:
+        return None  # Handle empty array case
+
+    min_val = max_val = arr[0]
+    for index in range(1, arr.length()):  # Start the loop from index 1
+        if arr[index] < min_val:
+            min_val = arr[index]
+        elif arr[index] > max_val:
+            max_val = arr[index]
+    return [min_val, max_val]
 
 # ------------------- TESTING -----------------------------------------
 

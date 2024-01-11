@@ -3,10 +3,15 @@ from static_array import *
 # ------------------- PROBLEM 3 - REVERSE -----------------------------------
 
 def reverse(arr: StaticArray) -> None:
-    """
-    TODO: Write this implementation
-    """
-    pass
+    left = 0
+    right = arr.length() - 1
+
+    while left < right:
+        left_var = arr[left] 
+        arr[left] = arr[right]
+        arr[right] = left_var
+        left += 1
+        right -= 1
 
 # ------------------- TESTING -----------------------------------------
 

@@ -1,7 +1,8 @@
 # Starter Code
 
-You will be provided with a starter “skeleton” code, on which you will build your implementation. Methods defined in the skeleton code must retain their names and input/output parameters. Variables defined in the skeleton code must also retain their names. We will only test your solution by making calls to methods defined in the skeleton code, and by checking values of variables defined in the skeleton code.
-**However, certain classes and methods cannot be changed in any way.** Please see the comments in the skeleton code for guidance. The content of any methods pre-written for you as part of the skeleton code must not be changed.!
+- You will be provided with a starter “skeleton” code, on which you will build your implementation. Methods defined in the skeleton code must retain their names and input/output parameters. Variables defined in the skeleton code must also retain their names. We will only test your solution by making calls to methods defined in the skeleton code, and by checking values of variables defined in the skeleton code.
+
+  **However, certain classes and methods cannot be changed in any way.** Please see the comments in the skeleton code for guidance. The content of any methods pre-written for you as part of the skeleton code must not be changed.!
 
 ## **Specific Instructions**
 
@@ -12,11 +13,8 @@ Most problems will take as input (and sometimes return as output) an object of t
 **StaticArray** is a very simple class that simulates the behavior of a fixed size array. It has only four methods, and contains code to support bracketed indexing ([]):
 
 > init() - Creates a new static array that will store a fixed number of elements. Once the StaticArray is created, its size cannot be changed.
->
 > set() - Changes the value of any element using its index.
->
 > get() - Reads the value of any element using its index.
->
 > length() - Queries the number of elements in the array.
 
 Please review the code and comments in the StaticArray class to better understand the available methods, their use, and input/output parameters. Note that since StaticArray is intentionally a very simple class, it does not possess the many capabilities typically associated with Python lists. You need to write your solutions using only the available StaticArray functionality, as described above.

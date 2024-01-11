@@ -3,10 +3,34 @@ from static_array import *
 # ------------------- PROBLEM 9 - COUNT_SORT --------------------------------
 
 def count_sort(arr: StaticArray) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
-    pass
+    if arr.length() == 0:
+        return arr  # Handle empty array case
+
+    min_val = max_val = arr[0]
+    for index in range(arr.length()):
+        if min_val > arr[index]:
+            min_val = arr[index]
+        if max_val < arr[index]:
+            max_val = arr[index]
+
+    arr_range = max_val - min_val + 1
+    count_arr = StaticArray(arr_range)  
+    for i in range(count_arr.length()):
+        count_arr[i] = 0 # Initialize count_arr with zeros
+
+    for index in range(arr.length()):
+        count_arr[arr[index] - min_val] += 1
+
+    result_arr = StaticArray(arr.length())
+    result_index = 0
+    for i in range(count_arr.length() - 1, -1, -1):
+        count = count_arr[i]
+        while count > 0:
+            result_arr[result_index] = i + min_val
+            result_index += 1
+            count -= 1
+
+    return result_arr
 
 # ------------------- BASIC TESTING -----------------------------------------
 

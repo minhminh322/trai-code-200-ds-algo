@@ -3,10 +3,15 @@ from static_array import *
 # ------------------- PROBLEM 4 - ROTATE ------------------------------------
 
 def rotate(arr: StaticArray, steps: int) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
-    pass
+    if arr.length() <= 1:
+        return arr  # No need to rotate
+
+    steps = steps % arr.length()  # Handle large steps by taking modulo
+    rotate_arr = StaticArray(arr.length())
+    for index in range(arr.length()):
+        new_index = (index + steps) % arr.length()
+        rotate_arr[index] = arr[new_index]
+    return rotate_arr
 
 # ------------------- TESTING -----------------------------------------
 

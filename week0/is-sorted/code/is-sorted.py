@@ -3,10 +3,21 @@ from static_array import *
 # ------------------- PROBLEM 5 - SA_RANGE ----------------------------------
 
 def sa_range(start: int, end: int) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
-    pass
+    ascending_result = descending_result = True
+    for index in range(1, arr.length()):
+        if arr[index] < arr[index - 1]:
+            ascending_result = False
+        elif arr[index] > arr[index - 1]:
+            descending_result = False
+        else:
+            ascending_result = descending_result = False
+    
+    if ascending_result:
+        return 1
+    elif descending_result:
+        return -1
+    else:
+        return 0
 
 # ------------------- TESTING -----------------------------------------
 

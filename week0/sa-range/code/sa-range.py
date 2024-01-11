@@ -3,10 +3,17 @@ from static_array import *
 # ------------------- PROBLEM 4 - ROTATE ------------------------------------
 
 def rotate(arr: StaticArray, steps: int) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
-    pass
+    if start < end:
+        length = end - start + 1
+    else:
+        length = start - end + 1
+    range_arr = StaticArray(length)
+    for index in range(0, length):
+        if start < end:
+            range_arr[index] = start + index
+        else:
+            range_arr[index] = start - index
+    return range_arr
 
 # ------------------- TESTING -----------------------------------------
 

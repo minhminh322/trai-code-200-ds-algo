@@ -3,10 +3,24 @@ from static_array import *
 # ------------------- PROBLEM 7 - FIND_MODE -----------------------------------
 
 def find_mode(arr: StaticArray) -> tuple[object, int]:
-    """
-    TODO: Write this implementation
-    """
-    pass
+    if arr.length() == 0:
+        return None, 0  # Handle empty array case
+
+    count = 1
+    mode = arr[0]
+    i = 0
+    while i < arr.length():
+        j = i + 1  # Start j from i + 1
+        while j < arr.length() and arr[j] == arr[i]:
+            count += 1
+            j += 1
+        
+        if j - i > count:
+            count = j - i
+            mode = arr[i]
+        i = j
+
+    return mode, count
 
 # ------------------- TESTING -----------------------------------------
 

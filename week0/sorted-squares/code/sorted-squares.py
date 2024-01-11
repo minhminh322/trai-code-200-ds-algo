@@ -3,10 +3,19 @@ from static_array import *
 # ------------------- PROBLEM 10 - SORTED SQUARES ---------------------------
 
 def sorted_squares(arr: StaticArray) -> StaticArray:
-    """
-    TODO: Write this implementation
-    """
-    pass
+    squares_arr = StaticArray(arr.length())
+    left, right = 0, arr.length() - 1
+    squares_arr_index = squares_arr.length() - 1
+    while left <= right:
+        if arr[left] ** 2 < arr[right] ** 2:
+            squares_arr[squares_arr_index] = arr[right] ** 2
+            right -= 1
+        else:
+            squares_arr[squares_arr_index] = arr[left] ** 2
+            left += 1
+        squares_arr_index -= 1
+        
+    return squares_arr
 
 # ------------------- BASIC TESTING -----------------------------------------
 
