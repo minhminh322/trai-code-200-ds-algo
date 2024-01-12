@@ -3,7 +3,10 @@
 - Implement a DynamicArray class by completing the skeleton code provided in the file **dynamic_array.py**. The DynamicArray class will use a StaticArray object as its underlying data storage container, and will provide many methods similar to the functionality of Python lists. Once completed, your implementation will include the following methods:
 
 > resize()
-> append() insert_at_index() remove_at_index() slice()
+> append()
+> insert_at_index()
+> remove_at_index()
+> slice()
 > merge()
 > map()
 > filter()

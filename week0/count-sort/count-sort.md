@@ -16,10 +16,6 @@ A possible first step would be to find the range of numbers in the array, and us
 
 Other functions in this assignment will help you determine how many different values could be in the array, as well as the range of possible values present.
 
-**This problem may be challenging, but try to implement this algorithm yourself.** For further clarification on the **count sort algorithm**, here is some suggested reading:
-
-(https://opendatastructures.org/ods-python/11_2_Counting_Sort_Radix_So.html)
-
 **Example #1:**
 
 ```python
