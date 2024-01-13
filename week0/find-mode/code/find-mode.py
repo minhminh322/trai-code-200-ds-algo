@@ -12,7 +12,7 @@ def find_mode(arr: StaticArray) -> tuple[object, int]:
     while i < arr.length():
         j = i + 1  # Start j from i + 1
         while j < arr.length() and arr[j] == arr[i]:
-            count += 1
+            # count += 1 Made by mistake
             j += 1
         
         if j - i > count:
