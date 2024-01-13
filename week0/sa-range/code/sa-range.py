@@ -3,6 +3,9 @@ from static_array import *
 # ------------------- PROBLEM 4 - ROTATE ------------------------------------
 
 def rotate(arr: StaticArray, steps: int) -> StaticArray:
+    # In practical, you can use length = abs(end - start) + 1, but remember
+    # Python built-in libraries are not allowed in this problem.
+    
     if start < end:
         length = end - start + 1
     else:
