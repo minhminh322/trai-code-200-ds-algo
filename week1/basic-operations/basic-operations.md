@@ -29,7 +29,7 @@ da.print_da_variables()
 > Length: 0, Capacity: 2, STAT_ARR Size: 2 [None, None]
 > NOTE: Example 2 below will not work properly unless the append() method is implemented.
 
-Example #2:
+**Example #2:**
 
 ```python
 da = DynamicArray([1, 2, 3, 4, 5, 6, 7, 8])
