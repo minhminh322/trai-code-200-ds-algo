@@ -156,12 +156,13 @@ class DynamicArray:
         if index < 0 or index > self._size - 1:
             raise DynamicArrayException
         
-        if self._capacity > 10:
-            if self._size < self._capacity // 4:
-                if self._size * 2 >= 10:
-                    self.resize(self._size * 2)
-                else:
-                    self.resize(10)
+        if self._capacity > 10 and self._size < self._capacity / 4:
+            resize_capacity = self._size * 2
+            if resize_capacity < 10:
+                resize_capacity = 10
+            
+            self.resize(resize_capacity)
+
 
         for i in range(index + 1, self._size):
             self._data[i - 1] = self._data[i]

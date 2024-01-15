@@ -155,12 +155,13 @@ class DynamicArray:
         if index < 0 or index > self._size - 1:
             raise DynamicArrayException
         
-        if self._capacity > 10:
-            if self._size < self._capacity // 4:
-                if self._size * 2 >= 10:
-                    self.resize(self._size * 2)
-                else:
-                    self.resize(10)
+        if self._capacity > 10 and self._size < self._capacity / 4:
+            resize_capacity = self._size * 2
+            if resize_capacity < 10:
+                resize_capacity = 10
+            
+            self.resize(resize_capacity)
+
 
         for i in range(index + 1, self._size):
             self._data[i - 1] = self._data[i]
@@ -170,7 +171,7 @@ class DynamicArray:
         if size < 0:
             raise DynamicArrayException
         
-        if start_index < 0 or start_index > self._size-1:
+        if start_index < 0 or start_index > self._size - 1:
             raise DynamicArrayException
         
         if size > self._size - start_index:
@@ -180,6 +181,7 @@ class DynamicArray:
         
         for index in range(start_index, start_index + size):
             slice_arr.append(self._data[index])
+            
         return slice_arr
 
     def merge(self, second_da: "DynamicArray") -> None:
