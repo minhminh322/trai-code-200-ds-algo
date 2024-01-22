@@ -4,7 +4,7 @@ A fixed sliding window is to maintain two pointers that are k apart from each ot
 
 ## Problem Statement:
 
-Given an array of numbers, find the maximum sum of a subarray with a fixed size k.
+> Given an array of numbers, find the maximum sum of a subarray with a fixed size k.
 
 ## Brute Force Approach:
 
@@ -61,7 +61,7 @@ Finally, the function returns the maximum sum of a subarray of size k.
 
 Sliding window is a powerful technique, especially when dealing with subarray problems. It helps optimize time complexity, and in this case, using a set facilitates efficient element lookup.
 
-Remember, sliding window can have fixed and variable variations, and it's a valuable tool for solving a variety of problems.
+Remember, sliding window can have fixed and dynamic variations, and it's a valuable tool for solving a variety of problems.
 
 # General Template
 
