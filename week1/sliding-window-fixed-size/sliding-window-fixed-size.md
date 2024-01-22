@@ -68,20 +68,19 @@ Remember, sliding window can have fixed and variable variations, and it's a valu
 Version 1:
 
 ```python
-    res, currRes = 0
+def slidingWindowFixedSize(nums: List[int], k: int) -> int:
+    res, currRes = 0, 0
     left = 0
-    for right in range(len(n)):
-    # Expand window
-    currRes += n[right]
-
-    # Meet threashold
-    if right - left + 1 == k:
-        # Process the window
-        res = min/max(res, currRes)
-
-        # Shrink the window
-        currRes -= n[left]
-        left += 1
+    for right in range(len(nums)):
+        # Expand window
+        currRes += nums[right]
+        # Meet threashold
+        if right - left + 1 == k:
+            # Process the window
+            res = min/max(res, currRes)
+            # Shrink the window
+            currRes -= nums[left]
+            left += 1
 
     return res
 ```
@@ -89,9 +88,10 @@ Version 1:
 Version 2: Pre-calculate the size K first
 
 ```python
+def slidingWindowFixedSizeV2(nums: List[int], k: int) -> int:
     # Part 1: Solve 1st window K, and update answer
-    ans = calculate result for lst[:k]
-    # Part 2: Solve the rest number from K to len(lst)
+    ans = calculate result for nums[:k]
+    # Part 2: Solve the rest number from K to len(nums)
     for i range(k, len):
         update/adding s[i]             # head value
         update/substract s[i-k]        # tail value
