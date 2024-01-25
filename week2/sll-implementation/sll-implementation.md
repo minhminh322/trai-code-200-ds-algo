@@ -161,3 +161,88 @@ for value in [1, 2, 3, 1, 2, 3, 3, 2, 1]:
 > SLL [1]
 > remove(1): True, Length: 0
 > SLL []
+
+## count(self, value: object) -> int:
+
+This method counts the number of elements in the list that match the provided value. The
+method then returns this number. It must be implemented with O(N) runtime complexity.
+
+**Example #1:**
+
+```python
+lst = LinkedList([1, 2, 3, 1, 2, 2])
+print(lst, lst.count(1), lst.count(2), lst.count(3), lst.count(4))
+```
+
+**Output:**
+
+> SLL [1 -> 2 -> 3 -> 1 -> 2 -> 2] 2 3 1 0
+
+## find(self, value: object) -> bool:
+
+This method returns a Boolean value based on whether or not the provided value exists in
+the list. It must be implemented with O(N) runtime complexity.
+
+**Example #1:**
+
+```python
+lst = LinkedList(["Waldo", "Clark Kent", "Homer", "Santa Claus"])
+print(lst)
+print(lst.find("Waldo"))
+print(lst.find("Superman"))
+print(lst.find("Santa Claus"))
+```
+
+**Output:**
+
+> SLL [Waldo -> Clark Kent -> Homer -> Santa Claus]
+> True
+> False
+> True
+
+## slice(self, start_index: int, size: int) -> "LinkedList":
+
+This method returns a new LinkedList that contains the requested number of nodes from the original list, starting with the node located at the requested start index. If the original list contains N nodes, a valid start_index is in range [0, N - 1] inclusive. The original list cannot be modified. The runtime complexity of your implementation must be O(N).
+You are allowed to directly access the variable (\_head) of LinkedList objects you create. If the provided start index is invalid, or if there are not enough nodes between the start index and the end of the list to make a slice of the requested size, this method raises a custom “SLLException”.
+
+**Example #1:**
+
+```python
+lst = LinkedList([1, 2, 3, 4, 5, 6, 7, 8, 9])
+ll_slice = lst.slice(1, 3)
+print("Source:", lst)
+print("Start: 1 Size: 3 :", ll_slice)
+ll_slice.remove_at_index(0)
+print("Removed at index 0 :", ll_slice)
+```
+
+**Output:**
+
+> Source: SLL [1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9]
+> Start: 1 Size: 3 : SLL [2 -> 3 -> 4]
+> Removed at index 0 : SLL [3 -> 4]
+
+**Example #2:**
+
+```python
+lst = LinkedList([10, 11, 12, 13, 14, 15, 16])
+print("Source:", lst)
+slices = [(0, 7), (-1, 7), (0, 8), (2, 3), (5, 0), (5, 3), (6, 1)]
+for index, size in slices:
+    print("Start:", index, "Size:", size, end="")
+    try:
+        print(" :", lst.slice(index, size))
+    except:
+        print(" : exception occurred.")
+```
+
+**Output:**
+
+> Source: SLL [10 -> 11 -> 12 -> 13 -> 14 -> 15 -> 16]
+> Start: 0 Size: 7 : SLL [10 -> 11 -> 12 -> 13 -> 14 -> 15 -> 16]
+> Start: -1 Size: 7 : exception occurred.
+> Start: 0 Size: 8 : exception occurred.
+> Start: 2 Size: 3 : SLL [12 -> 13 -> 14]
+> Start: 5 Size: 0 : SLL []
+> Start: 5 Size: 3 : exception occurred.
+> Start: 6 Size: 1 : SLL [16]
